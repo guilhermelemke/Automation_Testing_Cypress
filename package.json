@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/guilhermelemke/Automation_Testing_Cypress#readme",
   "devDependencies": {
-    "cypress": "^6.2.1"
+    "cypress": "^6.2.1",
+    "cypress-xpath": "^1.6.1"
   },
   "description": ""
 }
