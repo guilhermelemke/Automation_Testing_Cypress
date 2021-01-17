@@ -13,5 +13,6 @@ export const ELEMENTS = {
     inpDay: '[placeholder="Day"]',
     inpPassword1: '#firstpassword',
     inpPassword2: '#secondpassword',
-    submit: '#submitbtn'
+    submit: '#submitbtn',
+    phoneExists: 'Phone number already exists'
 }
