@@ -21,7 +21,7 @@ describe('Testes para a página de registro', () => {
         registerPage.submit();
     });
 
-    it.only('Cadastra o mesmo usuário - email e phone repetido', () => {
+    it('Cadastra o mesmo usuário - email e phone repetido', () => {
        
         const registerPage = new RegisterPage();
         registerPage.visitPage();
@@ -41,6 +41,8 @@ describe('Testes para a página de registro', () => {
         cy.contains('Email already exists').should('be.visible');
         cy.contains('Phone number already exists').should('be.visible');
     });
+
+
     // it('editar entrada de dados', () => {
     //     cy.visit('http://demo.automationtesting.in/WebTable.html');
     //     cy.get('.fa-pencil').first().dblclick();

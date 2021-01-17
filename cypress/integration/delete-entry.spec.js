@@ -11,7 +11,7 @@ describe('Testes da pagina de Edit', () => {
         editPage.deleteUser();
 
         cy.wait('@deleteUser')
-        cy.get('@deleteUser').then(req => {
+        cy.get('@deleteUser').then(xhr => {
             expect(xhr.response.statusCode).to.eq(200);
         })
     });
