@@ -20,5 +20,8 @@
     "cypress": "^6.2.1",
     "cypress-xpath": "^1.6.1"
   },
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "faker": "^5.1.0"
+  }
 }
