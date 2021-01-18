@@ -1,21 +1,24 @@
-/// <reference types="cypress" />
-// ***********************************************************
-// This example plugins/index.js can be used to load plugins
-//
-// You can change the location of this file or turn off loading
-// the plugins file with the 'pluginsFile' configuration option.
-//
-// You can read more here:
-// https://on.cypress.io/plugins-guide
-// ***********************************************************
 
-// This function is called when a project is opened or re-opened (e.g. due to
-// the project's config changing)
+/// <reference types="cypress" />
 
 /**
  * @type {Cypress.PluginConfig}
  */
+
+const faker = require("faker");
+
 module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
+  on("task", {
+    freshUser() {
+      user = {
+        firstName: faker.name.firstName(),
+        lastName: faker.name.lastName(),
+        email: faker.internet.email(),
+        phone: faker.random.number({min: 1000000000, max: 9999999999, precision: 1}),
+        address: faker.address.streetAddress(),
+        password: "newPassword"
+      };
+      return user;
+    }
+  });
 }
