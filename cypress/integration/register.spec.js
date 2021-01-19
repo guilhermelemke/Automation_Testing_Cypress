@@ -31,7 +31,6 @@ describe('Testes para a página de registro', () => {
     });
 
     it('Cadastra o mesmo usuário - email e phone repetido', () => {
-        // Não funciona, precisa cadastrar duas vezes o mesmo
         const registerPage = new RegisterPage();
         registerPage.visitPage();
         registerPage.setFirstName(user.firstName);
